@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h2 class="text-center mt-4 mb-4 font-bold">You Can Allways Count on Me!
+        <img class="inline w-6" src="img/blink.ico" alt="">
+    </h2>
+    <div class="w-96 m-auto">
+        <div class="rounded-xl overflow-hidden bg-blue-100 p-8">
+            <div class="pb-4">
+                <form id="screen1" value=""
+                    class="w-full bg-blue-50 h-10 p-2 rounded-t-md flex text-blue-900 text-l font-extrabold"></form>
+                <input id="screen2" value=""
+                    class="w-full bg-blue-50 h-10 p-2 rounded-b-md flex text-right text-blue-900 text-l font-extrabold">
+            </div>
+            <div class="grid grid-cols-5 gap-3">
+                <button value="pow" onclick="power(value)"
+                    class="bg-blue-300 hover:bg-blue-400 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">☐<sup>☐</sup></button>
+                <button value="root" onclick="root(value)"
+                    class="bg-blue-300 hover:bg-blue-400 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold"><sup>☐</sup>√☐</button>
+                <button value="sin" onclick="triangle(value)"
+                    class="bg-blue-300 hover:bg-blue-400 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">sin☐</button>
+                <button value="cos" onclick="triangle(value)"
+                    class="bg-blue-300 hover:bg-blue-400 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">cos☐</button>
+                <button value="tan" onclick="triangle(value)"
+                    class="bg-blue-300 hover:bg-blue-400 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">tan☐</button>
+                <button value="7" onclick="addToScrn(value)"
+                    class="bg-blue-300 hover:bg-blue-400 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">7</button>
+                <button value="8" onclick="addToScrn(value)"
+                    class="bg-blue-300 hover:bg-blue-400 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">8</button>
+                <button value="9" onclick="addToScrn(value)"
+                    class="bg-blue-300 hover:bg-blue-400 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">9</button>
+                <button value="DEL" onclick="subToScrn()"
+                    class="bg-blue-400 hover:bg-blue-500 hover:bg-blue-600 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">DEL</button>
+                <button value="AC" onclick="reset()"
+                    class="bg-blue-400 hover:bg-blue-500 hover:bg-blue-600 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">AC</button>
+                <button value="4" onclick="addToScrn(value)"
+                    class="bg-blue-300 hover:bg-blue-400 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">4</button>
+                <button value="5" onclick="addToScrn(value)"
+                    class="bg-blue-300 hover:bg-blue-400 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">5</button>
+                <button value="6" onclick="addToScrn(value)"
+                    class="bg-blue-300 hover:bg-blue-400 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">6</button>
+                <button value="*" onclick="addToScrn(value)"
+                    class="bg-blue-500 hover:bg-blue-600 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">×</button>
+                <button value="/" onclick="addToScrn(value)"
+                    class="bg-blue-500 hover:bg-blue-600 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">÷</button>
+                <button value="1" onclick="addToScrn(value)"
+                    class="bg-blue-300 hover:bg-blue-400 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">1</button>
+                <button value="2" onclick="addToScrn(value)"
+                    class="bg-blue-300 hover:bg-blue-400 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">2</button>
+                <button value="3" onclick="addToScrn(value)"
+                    class="bg-blue-300 hover:bg-blue-400 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">3</button>
+                <button value="+" onclick="addToScrn(value)"
+                    class="bg-blue-500 hover:bg-blue-600 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">+</button>
+                <button value="-" onclick="addToScrn(value)"
+                    class="bg-blue-500 hover:bg-blue-600 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">−</button>
+                <button value="0" onclick="addToScrn(value)"
+                    class="col-span-2 bg-blue-300 hover:bg-blue-400 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">0</button>
+                <button value="." onclick="addToScrn(value)"
+                    class="bg-blue-500 hover:bg-blue-600 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">.</button>
+                <button value="=" onclick="dsplyRslt()"
+                    class="col-span-2 bg-blue-500 hover:bg-blue-600 h-12 rounded-md flex justify-center items-center text-white text-xl font-extrabold">=</button>
+            </div>
+        </div>
+        <form id="hi"></form>
+        <script src="js/scripts.js"></script>
+</body>
+
+</html>
